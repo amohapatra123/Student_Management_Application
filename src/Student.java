@@ -10,43 +10,32 @@ public class Student {
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	public int getAge() {
 		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
 	}
 	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
 	public String getFathers_name() {
 		return fathers_name;
-	}
-	public void setFathers_name(String fathers_name) {
-		this.fathers_name = fathers_name;
 	}
 	public String getDob() {
 		return dob;
 	}
-	public void setDob(String dob) {
-		this.dob = dob;
-	}
 	public String getGender() {
 		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
 	}
 	public String getAddress() {
 		return address;
 	}
-	public void setAddress(String address) {
+	public Student(String name, int age, String phone, String fathers_name, String dob, String gender, String address) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.phone = phone;
+		this.fathers_name = fathers_name;
+		this.dob = dob;
+		this.gender = gender;
 		this.address = address;
 	}
 }

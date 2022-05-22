@@ -8,7 +8,6 @@ public class Operations {
 		
 		try {
 			Connection connection = Connector.createConnection();
-			Student s = new Student();
 			String query = "insert into student(name,age,phone,fathers_name,dob,gender,address) values(?,?,?,?,?,?,?)";
 			PreparedStatement p = connection.prepareStatement(query);
 			p.setString(1, stud.getName());

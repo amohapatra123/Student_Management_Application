@@ -2,6 +2,13 @@ import java.util.*;
 public class Main {
 	static String username;
 	static String  password;
+	static String name;
+	static int age;
+	static String phone;
+	static String fathers_name;
+	static String dob;
+	static String gender;
+	static String address;
 	public static void main(String[] args){
 		System.out.println("******Welcome to Student Management App*****");
 		Scanner y = new Scanner(System.in);
@@ -24,14 +31,30 @@ public class Main {
 			System.out.println("Press 1 to insert student detail");
 			int choice = y.nextInt();
 			if(choice==1) {
-				Student s = new Student();
-				s.setName("Anshuman Mohapatra");
-				s.setAge(21);
-				s.setPhone("8895455356");
-				s.setFathers_name("Dilip Kumar Mohapatra");
-				s.setDob("26-DEC-01");
-				s.setGender("Male");
-				s.setAddress("Aiginia, Bhubaneswar");
+				
+				System.out.println("Name : ");
+				y.nextLine();
+				name = y.nextLine();
+				System.out.print("Age : ");
+				age = y.nextInt();
+				y.nextLine();
+				System.out.print("Phone : ");
+				phone = y.nextLine();
+				System.out.print("Fathers Name : ");
+				fathers_name = y.nextLine();
+				System.out.print("DOB (eg. 21-MAR-09) : ");
+				dob = y.nextLine();
+				System.out.print("Gender : ");
+				gender = y.nextLine();
+				System.out.print("Address : ");
+				address = y.nextLine();
+				Student s = new Student(name,age,phone,fathers_name,dob,gender,address);				
+//				s.setAge(age);				
+//				s.setPhone(phone);				
+//				s.setFathers_name(fathers_name);				
+//				s.setDob(dob);				
+//				s.setGender(gender);				
+//				s.setAddress(address);
 				boolean res = Operations.InsertStudent(s);
 				if(res) {
 					System.out.println("Student added successfully....");
