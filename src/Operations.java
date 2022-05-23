@@ -1,6 +1,8 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Operations {
 	static boolean result = false;
@@ -98,4 +100,27 @@ public class Operations {
 		}
 		return result;
 	}
+    
+    public static void DisplayStudents() {
+    	
+    	try {
+    		Connection connection = Connector.createConnection();
+        	String query = "select * from student";
+        	Statement s = connection.createStatement();
+        	ResultSet r = s.executeQuery(query);
+        	while(r.next()) {
+        		System.out.println("Name : "+r.getString("name"));
+        		System.out.println("Age : "+r.getInt("age"));
+        		System.out.println("Phone : "+r.getString("phone"));
+        		System.out.println("Fathers name : "+r.getString("fathers_name"));
+        		System.out.println("DOB : "+r.getString("dob"));
+        		System.out.println("Gender : "+r.getString("gender"));
+        		System.out.println("Address : "+r.getString("address"));
+        		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        	}
+    	}catch(SQLException e) {
+    		e.printStackTrace();
+    	}
+    	
+    }
 }

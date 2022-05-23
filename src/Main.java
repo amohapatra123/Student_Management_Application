@@ -98,7 +98,8 @@ public class Main {
 				}
 				
 			}else if(choice==4) {
-				
+				System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+				Operations.DisplayStudents();				
 			}else if(choice==5) {
 				break;
 			}
