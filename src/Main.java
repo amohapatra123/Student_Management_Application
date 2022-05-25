@@ -32,6 +32,7 @@ public class Main {
 			System.out.println("Press 2 to delete student detail");
 			System.out.println("Press 3 to update student detail");
 			System.out.println("Press 4 to display student detail");
+			System.out.println("Press 5 to exit");
 			int choice = y.nextInt();
 			//add a student
 			if(choice==1) {
